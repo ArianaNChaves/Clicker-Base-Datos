@@ -49,7 +49,7 @@ public class Health : MonoBehaviour, IDamageable
 
     private void LookAtCamera()
     {
-        if (!mainCamera && !canvasHealthBar)
+        if (mainCamera != null)
         {
             canvasHealthBar.transform.LookAt(canvasHealthBar.transform.position + mainCamera.transform.forward);
         }

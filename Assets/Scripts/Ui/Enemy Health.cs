@@ -8,15 +8,14 @@ public class Health : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthBar;
-    [SerializeField] private Camera mainCamera;
     [SerializeField] private Canvas canvasHealthBar;
     
     private float _currentHealth;
-
+    private Camera _mainCamera;
     private void Start()
     {
-        _currentHealth = maxHealth;
-        UpdateHealthBar();
+        OnSpawn();
+        
     }
 
     private void LateUpdate()
@@ -50,9 +49,16 @@ public class Health : MonoBehaviour, IDamageable
 
     private void LookAtCamera()
     {
-        if (mainCamera != null)
+        if (_mainCamera != null)
         {
-            canvasHealthBar.transform.LookAt(canvasHealthBar.transform.position + mainCamera.transform.forward);
+            canvasHealthBar.transform.LookAt(canvasHealthBar.transform.position + _mainCamera.transform.forward);
         }
+    }
+
+    public void OnSpawn()
+    {
+        _mainCamera = Camera.main;
+        _currentHealth = maxHealth;
+        UpdateHealthBar();
     }
 }

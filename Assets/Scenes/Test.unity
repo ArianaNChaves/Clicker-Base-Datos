@@ -5149,6 +5149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1350637764}
   - component: {fileID: 1350637763}
+  - component: {fileID: 1350637765}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -5187,6 +5188,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1350637765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350637762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e449d401ffc06c044baffed4fea93753, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackTexture: {fileID: 2800000, guid: 473e78841d197d64d8d5110e2fe1b223, type: 3}
+  defaultTexture: {fileID: 2800000, guid: 04d58ce6c68ad5741a9990d02cea8fb1, type: 3}
+  pickTexture: {fileID: 2800000, guid: 120ac0b2b5d3485428c66936c3daadd6, type: 3}
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 1152
 --- !u!1 &1375583234
 GameObject:
   m_ObjectHideFlags: 0

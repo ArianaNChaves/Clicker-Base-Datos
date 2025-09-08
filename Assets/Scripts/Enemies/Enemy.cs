@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IClickeable
 {
-    [SerializeField] Health health;
+    [SerializeField] EnemyHealth enemyHealth;
 
     public void Clicked()
     {
-        health.TakeDamage(30f);
+        enemyHealth.TakeDamage(30f);
     }
 }

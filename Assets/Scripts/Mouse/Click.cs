@@ -34,12 +34,8 @@ public class Click : MonoBehaviour
         Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out var hit, Mathf.Infinity, clickeableLayer))
         {
-            // Debug.Log("Click a " + LayerMask.LayerToName(hit.collider.gameObject.layer));
-            if (Utilities.CompareLayerAndMask(hit.transform.gameObject.layer, clickeableLayer))
-            {
-                IClickeable clickeable = hit.transform.gameObject.GetComponent<IClickeable>();
-                clickeable.Clicked();
-            }
+            IClickeable clickeable = hit.transform.gameObject.GetComponent<IClickeable>();
+            clickeable.Clicked();
         } 
     }
     

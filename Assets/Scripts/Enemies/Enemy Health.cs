@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Health : MonoBehaviour, IDamageable
+public class EnemyHealth : MonoBehaviour, IDamageable
 {
     [SerializeField] private float maxHealth;
     [SerializeField] private Image healthBar;
@@ -15,7 +15,6 @@ public class Health : MonoBehaviour, IDamageable
     private void Start()
     {
         OnSpawn();
-        
     }
 
     private void LateUpdate()

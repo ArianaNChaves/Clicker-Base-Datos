@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beb0a8177ed0c744b633a6d7dd183ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  gameSettingsData: {fileID: 11400000, guid: c00ed2a60221cda4aafdc936db921cbe, type: 2}
   healthBar: {fileID: 6716164695891979429}
   canvasHealthBar: {fileID: 7591065681734326979}
 --- !u!1001 &3393702538486194391

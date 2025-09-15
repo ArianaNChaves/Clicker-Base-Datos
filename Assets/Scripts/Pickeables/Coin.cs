@@ -5,17 +5,12 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour, IClickeable, IPooleable
 {
-    public static event Action OnPickedCoin;
-
-    public void Clicked()
-    {
-        Debug.Log("Clickee una moneda");
-        OnPickedCoin?.Invoke();
-
-    }
+    public ClickableType Type => ClickableType.Coin;
 
     public void ReturnToPool()
     {
         throw new NotImplementedException();
     }
+    
+
 }

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StoreManager : MonoBehaviour
 {
     [SerializeField] private StoreSO storeData;
-    [SerializeField] private GameSettingsSO gameData;
+    [SerializeField] private GameDataSO gameData;
     
     [Header("Store Buttons")] 
     [SerializeField] private Button damageButton; 

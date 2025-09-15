@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour, IDamageable
 {
-    [SerializeField] private GameSettingsSO gameSettingsData;
+    [SerializeField] private GameDataSO gameDataData;
     [SerializeField] private Image healthBar;
     [SerializeField] private Canvas canvasHealthBar;
     
@@ -37,7 +37,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
 
     private void UpdateHealthBar()
     {
-        healthBar.fillAmount = _currentHealth/gameSettingsData.EnemyMaxHealth;
+        healthBar.fillAmount = _currentHealth/gameDataData.EnemyMaxHealth;
     }
 
     private void Die()
@@ -57,7 +57,7 @@ public class EnemyHealth : MonoBehaviour, IDamageable
     public void OnSpawn()
     {
         _mainCamera = Camera.main;
-        _currentHealth = gameSettingsData.EnemyMaxHealth;
+        _currentHealth = gameDataData.EnemyMaxHealth;
         UpdateHealthBar();
     }
 }

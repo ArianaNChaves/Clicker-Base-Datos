@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Player Data", menuName = "ScriptableObjects/Player Data")]
-public class GameSettingsSO : ScriptableObject
+public class GameDataSO : ScriptableObject
 {
     [Header("Player Stats")] 
     [SerializeField] private int playerDamage;

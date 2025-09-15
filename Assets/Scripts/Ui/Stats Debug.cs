@@ -6,7 +6,7 @@ using UnityEngine;
 public class StatsDebug : MonoBehaviour
 {
     [Header("Player Stats DEBUG")] 
-    [SerializeField] private GameSettingsSO gameData;
+    [SerializeField] private GameDataSO gameData;
     [SerializeField] private TextMeshProUGUI damageText;
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI clickRateText;

@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6703,7 +6703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 877677fa8556fca4f93fee0acab82d90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: c00ed2a60221cda4aafdc936db921cbe, type: 2}
+  gameData: {fileID: 11400000, guid: c00ed2a60221cda4aafdc936db921cbe, type: 2}
   clickeableLayer:
     serializedVersion: 2
     m_Bits: 1664
@@ -8178,9 +8178,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707040620}
-  - component: {fileID: 1707040621}
   - component: {fileID: 1707040622}
   - component: {fileID: 1707040623}
+  - component: {fileID: 1707040624}
   m_Layer: 0
   m_Name: UI Container
   m_TagString: Untagged
@@ -8203,21 +8203,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1707040621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707040619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c7e1e2783e67794ba67b3b7c0528333, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameData: {fileID: 11400000, guid: c00ed2a60221cda4aafdc936db921cbe, type: 2}
-  storeButton: {fileID: 126227648}
-  settingsButton: {fileID: 1805326111}
 --- !u!114 &1707040622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8247,6 +8232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   storeData: {fileID: 11400000, guid: 38d7e392ff1b05846bea3825af3f68b4, type: 2}
+  gameData: {fileID: 0}
   damageButton: {fileID: 116485610}
   healButton: {fileID: 1410074815}
   healthButton: {fileID: 962316465}
@@ -8255,6 +8241,25 @@ MonoBehaviour:
   healPriceText: {fileID: 1122461324}
   healthPriceText: {fileID: 1287816305}
   clickRatePriceText: {fileID: 1696165958}
+--- !u!114 &1707040624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707040619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccd33515f2c1914ab79c2e01c4e250c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameData: {fileID: 11400000, guid: c00ed2a60221cda4aafdc936db921cbe, type: 2}
+  coinsText: {fileID: 2004442242}
+  damageText: {fileID: 873243482}
+  storeButton: {fileID: 126227648}
+  settingsButton: {fileID: 1805326111}
+  storePanel: {fileID: 1315212176}
+  settingsPanel: {fileID: 1722675148}
 --- !u!1001 &1712585967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8603,7 +8608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

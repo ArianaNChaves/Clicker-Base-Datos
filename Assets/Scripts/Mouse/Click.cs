@@ -7,13 +7,13 @@ public class Click : MonoBehaviour
 {
     public static event Action OnPickedCoin;
     
-    [SerializeField] private GameSettingsSO data;
+    [SerializeField] private GameDataSO gameData;
     [SerializeField] private LayerMask clickeableLayer;
     private float _timer;
     private Camera _camera;
     private void Start()
     {
-        _timer = data.ClickRate;
+        _timer = gameData.ClickRate;
         _camera = Camera.main;
     }
     private void Update()
@@ -24,7 +24,7 @@ public class Click : MonoBehaviour
     private void PlayerClick()
     {
         _timer += Time.deltaTime;
-        if (_timer >= data.ClickRate && Input.GetMouseButtonDown(0))
+        if (_timer >= gameData.ClickRate && Input.GetMouseButtonDown(0))
         {
             _timer = 0;
             RaycastClick();
@@ -53,13 +53,15 @@ public class Click : MonoBehaviour
     
     private void AttackEnemy(Enemy enemy)
     {
-        enemy.GetComponent<IDamageable>().TakeDamage(data.PlayerDamage);
+        enemy.GetComponent<IDamageable>().TakeDamage(gameData.PlayerDamage);
     }
 
     private void CollectCoin(Coin coin)
     {
         //todo Hacer que sume una coin a la billetera
         Debug.Log("Agarre una coin");
+        OnPickedCoin?.Invoke();
+        gameData.Coins += gameData.CoinValue;
         Destroy(coin.gameObject);
     }
     

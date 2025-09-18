@@ -46,6 +46,7 @@ public class UIManager : MonoBehaviour
     private void UpdateCoins()
     {
         coinsText.text = gameData.Coins.ToString();
+        //todo sacar esto de aca y que hacer un script para efectos
         StartCoroutine(Utilities.UiBounce(0.2f, 20, coinPanel.localPosition, coinPanel));
         
     }

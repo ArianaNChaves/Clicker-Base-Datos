@@ -45,7 +45,6 @@ public class Click : MonoBehaviour
 
                 case ClickableType.Coin:
                     CollectCoin(hit.transform.GetComponent<Coin>());
-                    OnPickedCoin?.Invoke();
                     break;
             }
         } 

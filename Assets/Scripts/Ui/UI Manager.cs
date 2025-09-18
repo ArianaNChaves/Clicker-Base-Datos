@@ -19,16 +19,20 @@ public class UIManager : MonoBehaviour
     [Header("UI Panels")] 
     [SerializeField] private GameObject storePanel;
     [SerializeField] private GameObject settingsPanel;
+    
+    [Header("Shaked UI")]
+    [SerializeField] private RectTransform coinPanel;
 
     private void Start()
     {
-        UpdateUI();
+        UpdateCoins();
+        UpdateDamage();
     }
     private void OnEnable()
     {
         storeButton.onClick.AddListener(OnStoreClick);
         settingsButton.onClick.AddListener(OnSettingsClick);
-        Click.OnPickedCoin += UpdateUI;
+        Click.OnPickedCoin += UpdateCoins;
         
     }
 
@@ -36,12 +40,18 @@ public class UIManager : MonoBehaviour
     {
         storeButton.onClick.RemoveAllListeners();
         settingsButton.onClick.RemoveAllListeners();
-        Click.OnPickedCoin -= UpdateUI;
+        Click.OnPickedCoin -= UpdateCoins;
     }
 
-    private void UpdateUI()
+    private void UpdateCoins()
     {
         coinsText.text = gameData.Coins.ToString();
+        StartCoroutine(Utilities.UiBounce(0.2f, 20, coinPanel.localPosition, coinPanel));
+        
+    }
+
+    private void UpdateDamage()
+    {
         damageText.text = gameData.PlayerDamage.ToString();
     }
 

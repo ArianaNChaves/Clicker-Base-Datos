@@ -59,8 +59,8 @@ public class Click : MonoBehaviour
     {
         //todo Hacer que sume una coin a la billetera
         Debug.Log("Agarre una coin");
-        OnPickedCoin?.Invoke();
         gameData.Coins += gameData.CoinValue;
+        OnPickedCoin?.Invoke();
         Destroy(coin.gameObject);
     }
     

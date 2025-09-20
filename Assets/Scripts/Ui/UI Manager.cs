@@ -33,7 +33,8 @@ public class UIManager : MonoBehaviour
         storeButton.onClick.AddListener(OnStoreClick);
         settingsButton.onClick.AddListener(OnSettingsClick);
         Click.OnPickedCoin += UpdateCoins;
-        
+        StoreManager.UpdateUi += UpdateAllUi;
+
     }
 
     private void OnDisable()
@@ -41,6 +42,8 @@ public class UIManager : MonoBehaviour
         storeButton.onClick.RemoveAllListeners();
         settingsButton.onClick.RemoveAllListeners();
         Click.OnPickedCoin -= UpdateCoins;
+        StoreManager.UpdateUi -= UpdateAllUi;
+
     }
 
     private void UpdateCoins()
@@ -54,6 +57,12 @@ public class UIManager : MonoBehaviour
     private void UpdateDamage()
     {
         damageText.text = gameData.PlayerDamage.ToString();
+    }
+
+    private void UpdateAllUi()
+    {
+        UpdateCoins();
+        UpdateDamage();
     }
 
     private void OnStoreClick()

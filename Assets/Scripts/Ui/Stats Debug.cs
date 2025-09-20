@@ -17,6 +17,16 @@ public class StatsDebug : MonoBehaviour
         UpdatePlayerUI();
     }
 
+
+    private void OnEnable()
+    {
+        StoreManager.UpdateUi += UpdatePlayerUI;
+    }
+    
+    private void OnDisable()
+    {
+        StoreManager.UpdateUi -= UpdatePlayerUI;
+    }
     private void UpdatePlayerUI()
     {
         damageText.text = gameData.PlayerDamage.ToString();

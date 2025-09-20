@@ -76,7 +76,7 @@ public class StoreManager : MonoBehaviour
                 {
                     gameData.Coins -= storeData.ClickRatePrice;
                     //todo cambiar ese 0.5 por alguna variable, nose, un balance data o algo asi o un multiplicador yo que se
-                    gameData.ClickRate += 0.5f;
+                    gameData.ClickRate -= 0.5f;
                 }
                 else
                 {
